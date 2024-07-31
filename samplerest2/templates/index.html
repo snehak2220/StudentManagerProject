@@ -1,0 +1,64 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+    <link rel="stylesheet" href="{% static 'style2.css' %}">
+     <link rel="stylesheet" href="{% static 'navbar.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+
+</head>
+<body>
+<div class="nav">
+    <h1>Student Details</h1>
+<a href="{% url 'student-add' %}"><button type="button" class="add">Add Student</button></a>
+
+</div>
+
+<div class="container">
+    <div class="row">
+        {% for student in students %}
+        <div class="col">
+
+            <div class="card">
+                <div class="content">
+                    <p class="heading">{{student.First_Name}} {{student.Last_Name}}</p>
+                    <ul class="list">
+                     <li class="para">
+                         Id:{{student.Student_Id}}
+                    </li>
+                    <li class="para">
+                     Age:{{student.Age}}
+                    </li>
+                    <li class="para">
+                     Address:{{student.Address}}
+                    </li>
+                    <li class="para">
+                    Course:{{student.Course}}
+                    </li>
+                    <li class="para">
+                    Location:{{student.Location}}
+                    </li>
+                    <li class="para">
+                     Phone:{{student.Phone}}
+                    </li>
+                     </ul>
+                    <div class="buttons">
+                    <a href="{% url 'student-update-view' student.Student_Id %}"><button class="update">Update</button></a>
+                        <a href="{% url 'student-delete-view' student.Student_Id %}"><button class="delete">Delete</button></a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        {% endfor %}
+
+    </div>
+
+
+    </div>
+</body>
+</html>

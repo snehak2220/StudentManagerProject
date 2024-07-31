@@ -1,0 +1,18 @@
+.nav{
+    width:100vw;
+    height:70px;
+    display:flex;
+    background-color:pink;
+    justify-content:space-around;
+
+}
+.add{
+     margin-top:2px;
+     margin-bottom:5px;
+     border-radius:10px;
+    background-color:orange;
+    width:150px;
+    height:60px;
+    text-align:center
+
+}

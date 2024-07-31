@@ -1,0 +1,25 @@
+.form{
+    width:700px;
+    height:750px;
+    margin:0 auto;
+    background-color:grey;
+    padding-top:50px;
+    align-items:center;
+    text-align:center
+}
+.container{
+    width:100vw;
+    height:100vh;
+}
+input{
+    width:350px;
+    height:50px;
+    border-radius:20px;
+    border:1px solid black;
+    padding:20px;
+}
+textarea{
+    width:350px;
+    border-radius:20px;
+    border:1px solid black;
+}
